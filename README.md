@@ -1,2 +1,2 @@
-# DS-A-LAB
-Repository for My Data Structure and Algorithm Lab
+# Data Structures & Algorithm Lab Tasks
+This repo contain all of my lab tasks of Data Structures & Algorithm.
