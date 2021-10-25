@@ -45,4 +45,6 @@ collections.namedtuple(typename, field_names, *, rename=False, defaults=None, mo
 `_fields` Show the name of fields
 `_field_defaults` convert field name to key of dictionary and default value as value of the key
 
+---
+
 ### deque()
