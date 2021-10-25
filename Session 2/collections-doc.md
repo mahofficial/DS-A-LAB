@@ -11,9 +11,13 @@ import collections as col
 ### namedtuple()
 Named tuples assign name to each value in a tuple. It take these arguments:
 `typename` defines the type of data
+
 `field_names` assign the name to each value
+
 `rename=False` if True then invalid field_names will be replaced automatically with the _index of value.
+
 `defaults=None` set the default (enetered) value to the fieldnames in tuple (optional).
+
 `__module__` if module is defined then this is set to the particular value
 
 #### Example
@@ -42,9 +46,13 @@ collections.namedtuple(typename, field_names, *, rename=False, defaults=None, mo
 
 #### Methods of namedtuple()
 `_make(iterable)` Make a new instance from an existing sequence
+
 `_asdict()` convert named tuple to dictionary
+
 `_replace(**kwargs)` Replace specified fields with new values and return new instance of the named tuple
+
 `_fields` Show the name of fields
+
 `_field_defaults` convert field name to key of dictionary and default value as value of the key
 
 ---
@@ -78,18 +86,54 @@ collections.deque([iterable[, maxlen]])
 
 #### Methods of deque()
 `append(x)` Add x to the right side of the deque
+
 `appendleft(x)` Add x to the left side of the deque
+
 `pop()` Fetch and Remove element from the right side of the deque.
+
 `popleft()` Fetch and Remove element from the left side of the deque.
+
 `clear()` Remove all elements from the deque leaving it with length 0.
+
 `copy()` Create a shallow copy of the deque
+
 `count(x)` Count the number of deque elements equal to x
+
 `extend(iterable)` Extend the right side of the deque with the iterable values
+
 `extendleft(iterable)` Extend the left side of the deque with the iterable values
+
 `insert(p,x)` Insert deque into the x at position p
+
 `remove(value)` Remove the first occurence of value
+
 `rotate(n=1)` Rotate the deque n steps to the right, if n is negative rotate to the left
+
 `reverse()` Reverse the elements of the deque
 
 ---
+
+### ChainMap(*maps)
+It combines multiple mappings into one and create a single view
+
+#### Example
+```python
+import collections as c
+baseline = {'music': 'bach', 'art': 'rembrandt'}
+adjustments = {'art': 'van gogh', 'opera': 'carmen'}
+print(list(c.ChainMap(adjustments, baseline)))
+# Output = ['music', 'art', 'opera']
+```
+
+#### Basic Syntax
+```python
+collections.ChainMap(*maps)
+```
+
+#### Methods of ChainMap
+`maps[index]` retrive any list that is being combined through indexes
+
+`new_child(m=None, **kwargs)` Returns a new Chain Map followed by all of the maps in the current instance. If `m` is specified it becomes the new map at the front of the list of the mappings.
+
+`parents` Return a new ChainMap containing all of the maps in the current instance except the first one.
 
