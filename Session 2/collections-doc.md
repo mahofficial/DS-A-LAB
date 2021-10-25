@@ -50,3 +50,46 @@ collections.namedtuple(typename, field_names, *, rename=False, defaults=None, mo
 ---
 
 ### deque()
+Deque stands for double-ended queues and can be used for the implementation of stack and queues with time complexity of bigO(1) because at the backend of deque linked-list is being used.
+
+##### Example
+```python
+# Stack implementation using deque
+from collections import deque
+string = input("Enter any string: ")
+rev = ""
+stack = deque()
+for ch in string:
+    stack.append(ch)
+
+for i in range(0, len(stack)):
+    rev = rev + stack.pop()
+
+if rev.lower() == string.lower():
+    print("Entered string is palindrome!")
+else:
+    print("Entered string is not palindrome!")
+```
+
+##### Basic Syntax
+```python
+collections.deque([iterable[, maxlen]])
+```
+
+##### Methods of deque()
+`append(x)` Add x to the right side of the deque
+`appendleft(x)` Add x to the left side of the deque
+`pop()` Fetch and Remove element from the right side of the deque.
+`popleft()` Fetch and Remove element from the left side of the deque.
+`clear()` Remove all elements from the deque leaving it with length 0.
+`copy()` Create a shallow copy of the deque
+`count(x)` Count the number of deque elements equal to x
+`extend(iterable)` Extend the right side of the deque with the iterable values
+`extendleft(iterable)` Extend the left side of the deque with the iterable values
+`insert(p,x)` Insert deque into the x at position p
+`remove(value)` Remove the first occurence of value
+`rotate(n=1)` Rotate the deque n steps to the right, if n is negative rotate to the left
+`reverse()` Reverse the elements of the deque
+
+---
+
