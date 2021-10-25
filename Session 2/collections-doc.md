@@ -2,9 +2,11 @@
 
 ### Import Collections
 To use the modules of Collections Library, Use code
-```
+```python
 import collections as col
 ```
+
+---
 
 ### namedtuple()
 Named tuples assign name to each value in a tuple. It take these arguments:
@@ -15,7 +17,7 @@ Named tuples assign name to each value in a tuple. It take these arguments:
 `__module__` if module is defined then this is set to the particular value
 
 ##### Example
-```
+```python
 import collections as c
 Point = c.namedtuple('int', ['x', 'y']) #making named tuple
 p = Point(11, y=22) #initializing values
@@ -34,7 +36,7 @@ print(p)
 ```
 
 ##### Basic Syntax
-```
+```python
 collections.namedtuple(typename, field_names, *, rename=False, defaults=None, module=None)
 ```
 
