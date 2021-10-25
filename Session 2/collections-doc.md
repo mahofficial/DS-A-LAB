@@ -16,7 +16,7 @@ Named tuples assign name to each value in a tuple. It take these arguments:
 `defaults=None` set the default (enetered) value to the fieldnames in tuple (optional).
 `__module__` if module is defined then this is set to the particular value
 
-##### Example
+#### Example
 ```python
 import collections as c
 Point = c.namedtuple('int', ['x', 'y']) #making named tuple
@@ -35,12 +35,12 @@ print(p)
 # Example taken from official docs
 ```
 
-##### Basic Syntax
+#### Basic Syntax
 ```python
 collections.namedtuple(typename, field_names, *, rename=False, defaults=None, module=None)
 ```
 
-##### Methods of namedtuple()
+#### Methods of namedtuple()
 `_make(iterable)` Make a new instance from an existing sequence
 `_asdict()` convert named tuple to dictionary
 `_replace(**kwargs)` Replace specified fields with new values and return new instance of the named tuple
@@ -52,7 +52,7 @@ collections.namedtuple(typename, field_names, *, rename=False, defaults=None, mo
 ### deque()
 Deque stands for double-ended queues and can be used for the implementation of stack and queues with time complexity of bigO(1) because at the backend of deque linked-list is being used.
 
-##### Example
+#### Example
 ```python
 # Stack implementation using deque
 from collections import deque
@@ -71,12 +71,12 @@ else:
     print("Entered string is not palindrome!")
 ```
 
-##### Basic Syntax
+#### Basic Syntax
 ```python
 collections.deque([iterable[, maxlen]])
 ```
 
-##### Methods of deque()
+#### Methods of deque()
 `append(x)` Add x to the right side of the deque
 `appendleft(x)` Add x to the left side of the deque
 `pop()` Fetch and Remove element from the right side of the deque.
