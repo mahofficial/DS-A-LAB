@@ -108,6 +108,6 @@ if __name__ == "__main__":
     linked_list.insert(14, 3)  # perform functionality of appendleft() function as 3 is the last index
     linked_list.insert(16, 2)  # Value will be added at index = 2
 
-    print(f"\nData after popping: {linked_list.display()}\n")  # LinkedList([10, 2, 16, 3, 14])
+    print(f"\nData after insertion: {linked_list.display()}\n")  # LinkedList([10, 2, 16, 3, 14])
 
     print(f"Length of Linked List: {linked_list.len()}")  # 5
